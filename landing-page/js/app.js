@@ -62,10 +62,10 @@ aSections.forEach(aSection => {
         const asectionTitle = aSection.getAttribute("data-nav");
         aSection.classList.remove("your-active-class");
         if (
-            activeSec.top >= 0 &&
+            activeSec.top < 50 &&
+            activeSec.top > 0 &&
             activeSec.left >= 0 &&
-            activeSec.right <= (window.innerWidth || document.documentElement.clientWidth) &&
-            activeSec.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            activeSec.right <= (window.innerWidth || document.documentElement.clientWidth)
             ) {
                 aSection.classList.add("your-active-class");
                 const navItems = document.querySelectorAll("ul li");
