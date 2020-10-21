@@ -52,11 +52,14 @@ navMenu.appendChild(newFragment);
 */
 
 
-
 // Add class 'active' to section when near top of viewport
-const aSections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", function(scroll) {
+    console.log("I've been scrolled")
+    const aSections = document.querySelectorAll("section");
 aSections.forEach(aSection => {
         const activeSec = aSection.getBoundingClientRect();
+        const asectionTitle = aSection.getAttribute("data-nav");
         aSection.classList.remove("your-active-class");
         if (
             activeSec.top >= 0 &&
@@ -65,6 +68,15 @@ aSections.forEach(aSection => {
             activeSec.bottom <= (window.innerHeight || document.documentElement.clientHeight)
             ) {
                 aSection.classList.add("your-active-class");
+                const navItems = document.querySelectorAll("ul li");
+                navItems.forEach(navItem => {
+                    const navTitle = navItem.textContent;
+                    navItem.classList.remove("activeMenu")
+                    if (asectionTitle == navTitle) {
+
+                        navItem.classList.add("activeMenu")
+                    }
+                });
                 console.log("I'm in the viewPort")
             }
 
@@ -75,6 +87,8 @@ aSections.forEach(aSection => {
 
     
     })
+})
+
 
 // Scroll to anchor ID using scrollTO event
 

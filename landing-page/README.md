@@ -15,10 +15,3 @@ working with getBoundingClientRect() with a little confusing to me it worked but
 
 Thank you
 KAREEM FOUAD
-* [Instructions](#instructions)
-
-## Instructions
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
