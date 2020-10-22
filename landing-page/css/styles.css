@@ -8,12 +8,6 @@
  *
 */
 
-@media only screen and (max-width: 900px) {
-  .navbar__menu li { 
-display: block;}
-
-}
-
 /* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
