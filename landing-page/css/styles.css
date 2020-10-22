@@ -76,7 +76,7 @@ section {
 }
 
 .navbar__menu li {
-    display: block;
+    display: inline-block;
 }
 
 .navbar__menu .menu__link {
